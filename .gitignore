@@ -1,0 +1,22 @@
+# Python virtual environment
+.venv/
+
+# Rust build artifacts
+target/
+test/data/
+test.py
+
+# Python build artifacts
+__pycache__/
+*.pyd
+*.pdb
+*.pyc
+*.pyo
+*.egg-info/
+
+# IDE
+.trae/
+
+# OS
+.DS_Store
+Thumbs.db

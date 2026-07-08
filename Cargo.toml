@@ -1,0 +1,41 @@
+[package]
+name = "geopy"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance GIS geoprocessing core, ArcPy alternative, Rust + Python binding (pure rust, no external C libs)"
+license = "Apache-2.0"
+repository = "https://github.com/beishanglatiao/geopy"
+categories = ["science", "development-tools"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wbprojection = "0.3"
+wbvector = { version = "0.1", features = ["geoparquet"] }
+wbtopology = { version = "0.2", features = ["parallel"] }
+wbgeotiff = "0.1"
+wbraster = "0.2"
+geo-types = "0.7"
+wkb = "0.9"
+indexmap = "2.2"
+geo-rasterize = "0.1.2"
+euclid = "0.22"
+ndarray = "0.17"
+rayon = "1.8"
+polars = { version = "0.53", features = ["lazy", "binary_encoding", "serde"] }
+pyo3 = { version = "0.27", features = ["extension-module", "macros", "abi3"] }
+pyo3-polars = "0.26"
+
+[dev-dependencies]
+maturin = "1.7"
+assert_matches = "1"
+cargo-deny = "0.19"
+criterion = "0.5"
+
+[profile.release]
+opt-level = 3
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"

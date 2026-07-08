@@ -1,0 +1,5 @@
+[env]
+PYO3_PYTHON = "C:\\Users\\Huang\\Documents\\geopy\\.venv\\Scripts\\python.exe"
+CMAKE = "C:\\Program Files\\CMake\\bin\\cmake.exe"
+CMAKE_TOOLCHAIN_FILE = "C:\\tools\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+SQLite3_ROOT = "C:\\tools\\vcpkg\\packages\\sqlite3_x64-windows"
